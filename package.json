@@ -1,0 +1,8 @@
+{
+  "name": "my-profile-site",
+  "private": true,
+  "description": "here will my site!",
+  "dependencies": {
+    "package": "^1.0.1"
+  }
+}
