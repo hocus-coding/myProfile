@@ -1,1 +1,1 @@
-{"version":3,"sources":["../sass/global/_global.scss","../sass/blocks/_header.scss"],"names":[],"mappings":"AAAA,IACE,cAAA,CACA,WAAA,CCFF,aACE,cAAA,CACA,gBAAA,CACA,6BAAA,CAAA,qBAAA,CACA,YAAA,CACA,2CAAA","file":"style.min.css"}
+{"version":3,"sources":["../sass/global/_global.scss","../sass/blocks/_header.scss"],"names":[],"mappings":"AAAA,IACE,cAAA,CACA,WAAA,CCFF,aACE,cAAA,CACA,gBAAA","file":"style.min.css"}
