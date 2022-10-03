@@ -1,4 +1,7 @@
 .main-header {
   font-size: 30px;
   font-weight: bold;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
 }

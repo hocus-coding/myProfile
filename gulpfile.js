@@ -25,7 +25,6 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(gulp.dest('src/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
