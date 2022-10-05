@@ -7,4 +7,33 @@
   align-items: center;
   transition: $transition, opacity 0.7s ease;
   will-change: transform;
+  transform-style: preserve-3d;
+
+  &--bg {
+    background-color: rgba($basic-dark, 0.7);
+  }
+}
+
+.frame__title {
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: calc($index * 3);
+}
+
+.frame__image {
+  display: block;
+  position: relative;
+  background-color: $bg-color-orange;
+  object-fit: cover;
+  width: calc($index * $side-big);
+  height: calc($index * $side-small);
+
+  &--left {
+    right: calc($side-big / 2 * $index + $gutter);
+  }
+
+  &--right {
+    left: calc($side-big / 2 * $index + $gutter);
+  }
 }
