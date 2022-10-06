@@ -10,7 +10,7 @@
   transform-style: preserve-3d;
 
   &--bg {
-    background-color: rgba($basic-dark, 0.7);
+    background-color: rgba($basic-dark, 0.8);
   }
 }
 
@@ -19,6 +19,9 @@
   text-transform: uppercase;
   text-align: center;
   font-size: calc($index * 3);
+  width: min-content;
+  line-height: 1.03;
+  letter-spacing: 5px;
 }
 
 .frame__image {
