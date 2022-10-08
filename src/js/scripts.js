@@ -20,6 +20,18 @@ window.onscroll = function () {
     let opacity = zVals[i] < Math.abs(zSpacing) / 2 ? 1 : 0;
     frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`);
   });
+
 };
 
 window.scrollTo(0, 1);
+
+
+
+// Popup form
+
+// let popup = document.querySelector('.test');
+// let page = document.querySelector('.page');
+// let scrollBottom = page.scrollHeight - page.scrollTop - page.clientHeight;
+// console.log(scrollBottom);
+
+

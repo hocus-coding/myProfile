@@ -51,6 +51,10 @@
     height: calc($index * $side-big);
     right: calc($side-small / 2 * $index + $gutter);
   }
+
+  &--vertical-left {
+    left: calc($side-small / 2 * $index + $gutter);
+  }
 }
 
 .frame__content {
@@ -79,4 +83,21 @@
     max-width: 30vw;
     margin-top: 5vh;
   }
+}
+
+.test {
+  opacity: 1;
+  position: fixed;
+  background-color: rgba($basic-white, 0.5);
+  width: 100%;
+  height: 0;
+  text-align: center;
+
+  &--show {
+    height: 100%;
+  }
+}
+
+.test--kek:hover {
+  color: black;
 }
