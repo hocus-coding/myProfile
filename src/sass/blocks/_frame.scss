@@ -23,7 +23,7 @@
   text-transform: uppercase;
   text-align: center;
   font-size: calc($index * 3);
-  width: min-content;
+  // width: min-content;
   line-height: 1;
   letter-spacing: 5px;
   margin-top: 0;
@@ -86,14 +86,15 @@
 }
 
 .test {
-  opacity: 1;
-  position: fixed;
+  opacity: 0;
+  position: absolute;
   background-color: rgba($basic-white, 0.5);
   width: 100%;
   height: 0;
-  text-align: center;
+  transition: height 2s ease 0s;
 
   &--show {
+    opacity: 1;
     height: 100%;
   }
 }
