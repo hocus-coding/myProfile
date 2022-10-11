@@ -1,2 +1,16 @@
 @import "global/_global";
+@import "global/_fonts";
+@import "global/_variables";
+
+// Blocks
+
 @import "blocks/_header";
+@import "blocks/_page";
+@import "blocks/_main-content";
+@import "blocks/_container";
+@import "blocks/_gallery";
+@import "blocks/_frame";
+@import "blocks/_visually-hidden";
+@import "blocks/_form";
+@import "blocks/_feedback";
+@import "blocks/_field-item";
