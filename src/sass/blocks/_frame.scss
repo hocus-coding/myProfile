@@ -84,21 +84,3 @@
     margin-top: 5vh;
   }
 }
-
-.form__container {
-  opacity: 0;
-  position: absolute;
-  background-color: rgba($basic-white, 0.5);
-  width: 100%;
-  height: 0;
-  transition: height 2s ease 0s;
-
-  &--show {
-    opacity: 1;
-    height: 100%;
-  }
-}
-
-.test--kek:hover {
-  color: black;
-}

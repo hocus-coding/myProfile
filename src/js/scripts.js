@@ -1,7 +1,7 @@
 // Scroll 3D
 
 let page = document.querySelector('.page');
-let popup = document.querySelector('.test');
+let popup = document.querySelector('.form__container');
 let zSpacing = -1000;
 let lastPosition = zSpacing / 5;
 let $frames = document.getElementsByClassName('frame');
@@ -43,10 +43,10 @@ window.onscroll = function () {
   }
 
   if (comparison()) {
-    popup.classList.add('test--show');
+    popup.classList.add('form__container--show');
     console.log('конец скрола');
   } else {
-    popup.classList.remove('test--show');
+    popup.classList.remove('form__container--show');
     console.log('скрол не кончился');
   }
 };

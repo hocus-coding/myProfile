@@ -1,0 +1,23 @@
+.field-item {
+  font-size: calc($index * 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.field-item__area {
+  resize: none;
+}
+
+.field-item__input {
+  min-height: 0;
+  padding: 0;
+  line-height: 1;
+  height: 1px;
+  border: none;
+  transition: min-height 0.5s ease-out 0s;
+
+  &:hover,
+  &:focus {
+    min-height: 30px;
+  }
+}

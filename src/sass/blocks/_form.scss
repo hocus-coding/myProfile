@@ -1,6 +1,48 @@
-// .form {
-//   width: 200px;
-//   height: 200px;
-//   background-color: $bg-color-orange;
-//   position: fixed;
-// }
+.form__container {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba($basic-white, 0.7);
+  background-image: url("../img/myself-33.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  transition: height 2s ease 0s;
+  z-index: 1;
+
+  &--show {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.form__container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba($basic-black, 0.8);
+}
+
+.form__content {
+  margin-top: 5vh;
+  margin-left: 50vw;
+  max-width: 40vw;
+
+  .form__title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: calc($index * 1.3);
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 3vh;
+    letter-spacing: 2px;
+  }
+
+  .form__text {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+}
