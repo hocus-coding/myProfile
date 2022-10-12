@@ -117,21 +117,25 @@
                 <ul class="feedback__list">
                   <li class="feedback__item field-item">
                     <label class="field-item__name" for="name">
-                      Имя
+                      Ваше имя
                     </label>
                     <input class="field-item__input" type="text" name="name" id="name">
                   </li>
                   <li class="feedback__item field-item">
                     <label class="field-item__name" for="email">
-                      Почта
+                      Почтовый адрес
                     </label>
                     <input class="field-item__input" type="email" name="email" id="email">
                   </li>
                   <li class="feedback__item field-item">
                     <label class="field-item__name" for="subject">
-                      Тема
+                      Выберите тему
                     </label>
-                    <input class="field-item__input" type="text" name="subject" id="subject">
+                    <select class="field-item__select" name="subject" id="subject">
+                      <option class="test1" value="">Просто пообщаться</option>
+                      <option value="">Нужно больше информации</option>
+                      <option value="">Имеется готовое предложение</option>
+                    </select>
                   </li>
                   <li class="feedback__item field-item">
                     <label class="field-item__name" for="message">

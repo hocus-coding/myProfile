@@ -33,7 +33,7 @@
 .frame__image {
   display: block;
   position: relative;
-  background-color: $bg-color-orange;
+  background-color: $bg-orange;
   object-fit: cover;
   width: calc($index * $side-big);
   height: calc($index * $side-small);

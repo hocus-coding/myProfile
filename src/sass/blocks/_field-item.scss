@@ -9,15 +9,25 @@
 }
 
 .field-item__input {
-  min-height: 0;
+  min-height: 30px;
   padding: 0;
   line-height: 1;
-  height: 1px;
   border: none;
   transition: min-height 0.5s ease-out 0s;
+}
 
-  &:hover,
-  &:focus {
-    min-height: 30px;
+.field-item__select {
+  font-size: 20px;
+  background-color: $basic-dark;
+  color: $bg-brown;
+
+  option:focus {
+    background-color: $basic-dark;
+    color: $basic-white;
+  }
+
+  .test1:hover {
+    color: $bg-brown;
+    font-size: 40px;
   }
 }
