@@ -5,8 +5,10 @@ $side-big: 36;
 $depth: 2900px;
 $transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
+// Colors <<<<<
+
 $basic-black: #000000;
-$basic-dark: #140900;
+$basic-dark: #0e0600;
 $basic-white: #ffffff;
 $bg-orange: #d38440;
 $bg-gray: #d7e5df;
@@ -15,3 +17,10 @@ $bg-blue: #3a9fc9;
 $bg-dark-blue-gray: #096cad;
 $bg-brown: #a9663b;
 $bg-dark-brown: #7d412f;
+
+
+// Viewports <<<<<
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;

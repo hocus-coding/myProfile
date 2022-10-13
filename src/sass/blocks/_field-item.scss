@@ -1,5 +1,5 @@
 .field-item {
-  font-size: calc($index * 0.9);
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -9,25 +9,49 @@
 }
 
 .field-item__input {
-  min-height: 30px;
-  padding: 0;
+  @media (max-width: $mobile-width-only) {
+    min-height: 20px;
+  }
+
+  min-height: 40px;
+  font-size: calc($index * 0.9);
   line-height: 1;
-  border: none;
-  transition: min-height 0.5s ease-out 0s;
+  border: 2px solid rgba($bg-blue, 0.5);
+  transition: all 0.5s ease-out 0s;
+  outline: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding-left: 5px;
+  color: $basic-white
 }
 
-.field-item__select {
-  font-size: 20px;
-  background-color: $basic-dark;
-  color: $bg-brown;
+.field-item__area {
+  font-size: calc($index * 0.7);
+  outline: none;
+  color: $basic-white;
+  background-color: transparent;
+  border: 2px solid rgba($bg-blue, 0.5);
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-top: 5px;
+}
 
-  option:focus {
-    background-color: $basic-dark;
-    color: $basic-white;
-  }
+.field-item__name {
+  font-size: calc($index * 0.7);
+  text-transform: uppercase;
+  color: rgba($bg-blue, 0.5);
+}
 
-  .test1:hover {
-    color: $bg-brown;
-    font-size: 40px;
-  }
+.feedback__btn {
+  background-color: transparent;
+  border: 2px solid $bg-blue;
+  width: 100%;
+  max-width: 165px;
+  color: $bg-blue;
+  font-size: calc($index * 0.7);
+  text-transform: uppercase;
+  padding: 9px 19px;
+  align-self: flex-end;
+  cursor: pointer;
+  outline: none;
 }
