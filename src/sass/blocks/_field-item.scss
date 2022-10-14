@@ -9,20 +9,16 @@
   }
 }
 
-.field-item__area {
-  resize: none;
-}
-
 .field-item__input {
   @media (max-width: $mobile-width-only) {
-    min-height: 30px;
+    min-height: 35px;
   }
 
   min-height: 45px;
   font-size: calc($index * 0.9);
   line-height: 1;
   border: 2px solid rgba($bg-blue, 0.5);
-  transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease 0s;
   outline: none;
   background-color: transparent;
   box-sizing: border-box;
@@ -39,18 +35,19 @@
   &:focus~.field-item__name,
   &:valid~.field-item__name {
     font-size: calc($index * 0.5);
-    transform: translate(15px, -8px);
+    transform: translate(12px, -8px);
     background-color: $bg-blue;
     color: $basic-dark;
     padding: 4px 8px;
 
     @media (max-width: $mobile-width-only) {
-      transform: translate(10px, -6px);
+      transform: translate(8px, -6px);
     }
   }
 }
 
 .field-item__area {
+  resize: none;
   font-size: calc($index * 0.7);
   outline: none;
   color: $basic-white;
@@ -58,7 +55,29 @@
   border: 2px solid rgba($bg-blue, 0.5);
   box-sizing: border-box;
   padding-left: 5px;
-  padding-top: 5px;
+  padding-top: 9px;
+  transition: border 0.5s ease;
+
+  &:hover~.field-item__name,
+  &:focus~.field-item__name,
+  &:valid~.field-item__name {
+    font-size: calc($index * 0.5);
+    transform: translate(12px, -8px);
+    background-color: $bg-blue;
+    color: $basic-dark;
+    padding: 4px 8px;
+    letter-spacing: 1px;
+
+    @media (max-width: $mobile-width-only) {
+      transform: translate(8px, -6px);
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:valid {
+    border: 2px solid $bg-blue;
+  }
 }
 
 .field-item__name {
@@ -69,13 +88,12 @@
   pointer-events: none;
   left: 0;
   padding: 8px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 300;
   line-height: 1;
+  transition: all 0.5s ease;
 
   @media (max-width: $mobile-width-only) {
     padding: 5px;
   }
-
-  &--area {}
 }
