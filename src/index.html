@@ -93,28 +93,30 @@
               <form class="feedback" action="" method="post">
                 <ul class="feedback__list">
                   <li class="feedback__item field-item">
+                    <input class="field-item__input" type="text" name="name" id="name" required>
                     <label class="field-item__name" for="name">
                       Имя*
                     </label>
-                    <input class="field-item__input" type="text" name="name" id="name">
                   </li>
                   <li class="feedback__item field-item">
+                    <input class="field-item__input" type="email" name="email" id="email" required>
                     <label class="field-item__name" for="email">
                       Почта*
                     </label>
-                    <input class="field-item__input" type="email" name="email" id="email">
                   </li>
                   <li class="feedback__item field-item">
+                    <input class="field-item__input" type="text" name="subject" id="subject" required>
                     <label class="field-item__name" for="subject">
                       Тема
                     </label>
-                    <input class="field-item__input" type="text" name="subject" id="subject">
                   </li>
                   <li class="feedback__item field-item">
-                    <label class="field-item__name" for="message">
+                    <textarea class="field-item__area" name="message" id="message" cols="10" rows="5"
+                      required></textarea>
+                    <label class="field-item__name field-item__name--area" for="message">
                       Послание
                     </label>
-                    <textarea class="field-item__area" name="message" id="message" cols="10" rows="4"></textarea>
+
                   </li>
                 </ul>
                 <button class="feedback__btn" type="submit">Отправить!</button>
