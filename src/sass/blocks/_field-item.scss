@@ -41,17 +41,3 @@
   text-transform: uppercase;
   color: rgba($bg-blue, 0.5);
 }
-
-.feedback__btn {
-  background-color: transparent;
-  border: 2px solid $bg-blue;
-  width: 100%;
-  max-width: 165px;
-  color: $bg-blue;
-  font-size: calc($index * 0.7);
-  text-transform: uppercase;
-  padding: 9px 19px;
-  align-self: flex-end;
-  cursor: pointer;
-  outline: none;
-}

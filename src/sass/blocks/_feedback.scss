@@ -10,11 +10,51 @@
   @media(min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 40px;
 
     .feedback__item:nth-child(3),
     .feedback__item:nth-child(4) {
       grid-column: span 2;
     }
+  }
+}
+
+.feedback__btn {
+  position: relative;
+  background-color: transparent;
+  border: 2px solid $btn-decor;
+  padding: 13px 22px;
+  width: 100%;
+  max-width: 185px;
+  color: $btn-decor;
+  font-size: calc($index * 0.9);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  align-self: flex-end;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.5s ease, background-color 1.7s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $btn-decor;
+    z-index: -1;
+    height: 100%;
+    width: 0;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    transition: width 0.6s ease;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $btn-decor;
+    color: $basic-dark;
   }
 }

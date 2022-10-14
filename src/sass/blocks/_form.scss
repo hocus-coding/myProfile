@@ -1,19 +1,29 @@
 .form__container {
   opacity: 0;
   position: absolute;
-  background-color: rgba($basic-white, 0.7);
+  background-color: $basic-dark;
   background-image: url("../img/myself-33.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 0;
-  transition: height 2s ease 0s;
+  height: 1px;
+  top: 45%;
+  transition: top 1s ease, height 1s ease, opacity 1.7s ease;
   z-index: 1;
 
+
   &--show {
-    opacity: 1;
     height: 100%;
+    opacity: 1;
+    top: 0;
+
+    .form__content {
+      transition: height 1s ease, opacity 1s ease;
+      height: 100%;
+      overflow: visible;
+      opacity: 1;
+    }
   }
 }
 
@@ -26,13 +36,20 @@
 }
 
 .form__content {
-  margin-top: 5vh;
-  margin-left: 50vw;
+  position: absolute;
+  left: 50%;
+  transition: opacity 1s ease 0s, height 1s ease 0s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  padding-top: 30px;
   max-width: 40vw;
 
   @media (max-width: $mobile-width-only) {
-    margin-left: 37vw;
-    max-width: 50vw;
+    transform: translateX(-50%);
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 60vw;
   }
 
   .form__title {
@@ -42,13 +59,13 @@
     line-height: 1.1;
     margin-top: 0;
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   .form__text {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.1;
+    letter-spacing: 1px;
   }
-
 }

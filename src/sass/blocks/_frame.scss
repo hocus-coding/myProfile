@@ -11,6 +11,7 @@
 
   &--bg {
     background-color: rgba($basic-dark, 0.9);
+    width: 100vw;
   }
 
   &--bg-blur {
@@ -61,26 +62,38 @@
   &--text-right {
     position: relative;
     left: 18vw;
+
+    @media (max-width: $mobile-width-only) {
+      left: 25vw;
+    }
   }
 
   &--text-left {
     position: relative;
     right: 18vw;
     text-align: right;
+
+    @media (max-width: $mobile-width-only) {
+      right: 25vw;
+    }
   }
 
   .frame__subtitle {
     font-weight: 100;
     text-transform: uppercase;
-    font-size: calc($index * 2);
+    font-size: calc($index * 1.5);
     line-height: 1;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .frame__text {
+    @media (max-width: $mobile-width-only) {
+      max-width: 40vw;
+    }
+
     max-width: 30vw;
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 }
