@@ -90,16 +90,18 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores nostrum, facere alias optio libero cum
                 consectetur.
               </p>
-              <form class="feedback" action="" method="post">
+              <form class="feedback" action="" method="post" id="form">
                 <ul class="feedback__list">
                   <li class="feedback__item field-item">
-                    <input class="field-item__input" type="text" name="name" id="name" placeholder=" ">
+                    <input class="field-item__input field-item__input--requed" type="text" name="name" id="name"
+                      placeholder=" ">
                     <label class="field-item__name" for="name">
                       Имя
                     </label>
                   </li>
                   <li class="feedback__item field-item">
-                    <input class="field-item__input" type="email" name="email" id="email" placeholder=" ">
+                    <input class="field-item__input field-item__input--requed field-item__input--email" type="email"
+                      name="email" id="email" placeholder=" ">
                     <label class="field-item__name" for="email">
                       Почта
                     </label>
@@ -111,8 +113,8 @@
                     </label>
                   </li>
                   <li class="feedback__item field-item">
-                    <textarea class="field-item__input field-item__input--area" name="message" id="message"
-                      placeholder=" "></textarea>
+                    <textarea class="field-item__input field-item__input--area field-item__input--requed" name="message"
+                      id="message" placeholder=" "></textarea>
                     <label class="field-item__name field-item__name--area" for="message">
                       Послание
                     </label>

@@ -10,7 +10,6 @@
   @media (max-width: $mobile-width-only) {
     min-height: 20px;
     padding-left: 3px;
-    padding-bottom: 3px;
   }
 
   &--area {
@@ -33,6 +32,7 @@
   box-sizing: border-box;
   padding-left: 5px;
   padding-top: 5px;
+  padding-bottom: 3px;
   color: rgba($bg-blue, 0.7);
 
   &:hover,
@@ -44,7 +44,7 @@
   &:focus~.field-item__name,
   &:not(:placeholder-shown)~.field-item__name {
     font-size: calc($index * 0.4);
-    transform: translate(12px, -7px);
+    transform: translate(12px, -9px);
     background-color: $bg-blue;
     color: $basic-dark;
     padding: 3px 5px;
