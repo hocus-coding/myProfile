@@ -8,27 +8,31 @@
 
 .field-item__input {
   @media (max-width: $mobile-width-only) {
-    min-height: 25px;
-
-    &--area {
-      min-height: 40px;
-    }
+    min-height: 20px;
+    padding-left: 3px;
+    padding-bottom: 3px;
   }
 
   &--area {
-    min-height: 60px;
+    @media (max-width: $mobile-width-only) {
+      min-height: 70px;
+    }
+
+    resize: none;
+    min-height: 140px;
   }
 
   width: 100%;
   min-height: 35px;
-  font-size: 1.1rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 1.1;
   border: 2px solid rgba($bg-blue, 0.3);
   transition: all 0.5s ease 0s;
   outline: none;
   background-color: transparent;
   box-sizing: border-box;
   padding-left: 5px;
+  padding-top: 5px;
   color: rgba($bg-blue, 0.7);
 
   &:hover,
@@ -48,11 +52,6 @@
     @media (max-width: $mobile-width-only) {
       transform: translate(8px, -5px);
     }
-  }
-
-  &--area {
-    padding-top: 10px;
-    resize: none;
   }
 }
 
