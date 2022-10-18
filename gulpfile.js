@@ -95,6 +95,8 @@ const copy = (done) => {
     'src/*.ico',
     'src/*.webmanifest',
     'src/img/icons/*.svg',
+    'src/phpmailer/*',
+    'src/sendmail.php',
   ], {
     base: 'src'
   })
