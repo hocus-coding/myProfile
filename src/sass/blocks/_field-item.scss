@@ -53,6 +53,11 @@
       transform: translate(8px, -5px);
     }
   }
+
+  &--error {
+    border-color: $invalid-color;
+    box-shadow: 0 0 10px $invalid-color;
+  }
 }
 
 .field-item__name {

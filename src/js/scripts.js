@@ -63,6 +63,26 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     let error = formValidate(form);
+    let formData = new FormData(form);
+
+    if (error === 0) {
+      form.classList.add('feedback--sending');
+      let response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok) {
+        let result = await response.json();
+        alert(result.message);
+        form.reset();
+        form.classList.remove('feedback--sending');
+      } else {
+        alert('ошибка отправки');
+        form.classList.remove('feedback--sending');
+      }
+    } else {
+      alert('Заполните обязательные поля');
+    }
   }
 
   function formValidate(form) {
@@ -74,9 +94,18 @@ document.addEventListener('DOMContentLoaded', function () {
       formRemoveError(input);
 
       if (input.classList.contains('field-item__input--email')) {
-
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
       }
     }
+    return error;
   }
 
   function formAddError(input) {

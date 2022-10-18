@@ -1,3 +1,26 @@
+.feedback {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/loading.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba($basic-dark, 0.4);
+    box-shadow: 0 0 15px $basic-dark;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+
+  &--sending::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .feedback__list {
   padding: 0;
   list-style: none;
