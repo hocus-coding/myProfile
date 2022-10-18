@@ -5,7 +5,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('../img/loading.png');
+    background-image: url("../img/loading.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba($basic-dark, 0.4);
@@ -25,7 +25,7 @@
   padding: 0;
   list-style: none;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
