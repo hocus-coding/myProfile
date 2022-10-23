@@ -44,16 +44,15 @@ window.onscroll = function () {
 
   if (comparison()) {
     popup.classList.add('form__container--show');
-    console.log('конец скрола');
   } else {
     popup.classList.remove('form__container--show');
-    console.log('скрол не кончился');
   }
 };
 
 window.scrollTo(0, 1);
 
-// Form Validation
+// Form Send
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
@@ -61,29 +60,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
   async function formSend(e) {
     e.preventDefault();
-
     let error = formValidate(form);
-    let formData = new FormData(form);
 
     if (error === 0) {
       form.classList.add('feedback--sending');
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData
-      });
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        form.reset();
-        form.classList.remove('feedback--sending');
-      } else {
-        alert('ошибка отправки');
-        form.classList.remove('feedback--sending');
-      }
+      Email.send({
+        SecureToken: 'ab62c18f-42ed-4ba0-b73c-922452d4f357',
+        To: 'lysogordmitry@gmail.com',
+        From: 'hoqus.coding@gmail.com',
+        Subject: 'Вам Важное Письмо',
+        Body: 'Subject: ' + document.getElementById('subject').value
+          + '<br> Name: ' + document.getElementById('name').value
+          + '<br> Email: ' + document.getElementById('email').value
+          + '<br> Message: ' + document.getElementById('message').value
+      }).then(
+        message => alert(message),
+        form.reset(),
+        form.classList.remove('feedback--sending')
+      );
+
     } else {
       alert('Заполните обязательные поля');
+      form.classList.remove('feedback--sending')
     }
   }
+
+  // Form Validation
 
   function formValidate(form) {
     let error = 0;
@@ -120,3 +122,6 @@ document.addEventListener('DOMContentLoaded', function () {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });
+
+/* SmtpJS.com - v3.0.0 */
+var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };

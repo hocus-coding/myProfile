@@ -40,7 +40,6 @@
     border-color: $bg-blue;
   }
 
-  &:hover~.field-item__name,
   &:focus~.field-item__name,
   &:not(:placeholder-shown)~.field-item__name {
     font-size: calc($index * 0.4);
