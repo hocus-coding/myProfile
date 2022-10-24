@@ -4,18 +4,37 @@
   &::after {
     content: "";
     position: absolute;
+    z-index: 2;
     inset: 0;
-    background-image: url("../img/loading.png");
-    background-repeat: no-repeat;
-    background-position: center;
     background-color: rgba($basic-dark, 0.4);
-    box-shadow: 0 0 15px $basic-dark;
+    box-shadow: 0 0 10px $basic-dark;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
   }
 
-  &--sending::after {
+  &::before {
+    content: "";
+    z-index: 3;
+    position: absolute;
+    left: 45%;
+    top: 30%;
+    width: 10px;
+    height: 10px;
+    background-color: $bg-blue;
+    border: 2px solid white;
+    animation-name: cube;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease-in;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  &--sending::after,
+  &--sending::before {
     opacity: 1;
     visibility: visible;
   }

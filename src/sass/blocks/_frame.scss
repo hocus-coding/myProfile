@@ -10,7 +10,14 @@
   transform-style: preserve-3d;
 
   &--bg {
-    background-color: rgba($basic-dark, 0.9);
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 170vw;
+      height: 170vh;
+      background-color: rgba($basic-dark, 0.9);
+    }
   }
 
   &--bg-blur {
