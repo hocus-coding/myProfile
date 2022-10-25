@@ -30,7 +30,6 @@
   text-transform: uppercase;
   text-align: center;
   font-size: calc($index * 3);
-  // width: min-content;
   line-height: 1;
   letter-spacing: 5px;
   margin-top: 0;
@@ -67,20 +66,20 @@
 .frame__content {
   &--text-right {
     position: relative;
-    left: 18vw;
+    left: 16.5vw;
 
     @media (max-width: $mobile-width-only) {
-      left: 25vw;
+      left: 23vw;
     }
   }
 
   &--text-left {
     position: relative;
-    right: 18vw;
+    right: 16.5vw;
     text-align: right;
 
     @media (max-width: $mobile-width-only) {
-      right: 25vw;
+      right: 23vw;
     }
   }
 
