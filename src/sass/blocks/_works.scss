@@ -1,0 +1,19 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.works__text {
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 7px;
+}
+
+.works__link {
+  line-height: 1;
+  color: $bg-blue;
+  text-decoration: none;
+}
