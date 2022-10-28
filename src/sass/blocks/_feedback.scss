@@ -96,7 +96,8 @@
     width: 100%;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $btn-decor;
     color: $basic-dark;
   }
