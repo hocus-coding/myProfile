@@ -1,15 +1,12 @@
 .works {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .works__text {
   font-weight: 500;
   line-height: 1;
   margin-top: 0;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .works__link {

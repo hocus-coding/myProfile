@@ -1,4 +1,20 @@
 .docs {
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.docs__name {
+  font-weight: 300;
+  font-size: calc((1vw + 1vh)*.7);
+  line-height: 1;
+  display: block;
+  color: $btn-decor;
+  cursor: pointer;
+}
+
+.docs__sertificate {
+  opacity: 0;
+  visibility: hidden;
+  height: 1px;
 }
