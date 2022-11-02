@@ -3,14 +3,26 @@
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   // align-items: center;
 }
 
 .socials__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  background-color: $bg-dark-gray;
-  width: 40px;
-  height: 40px;
+  background-color: rgba($basic-white, 0.03);
+  color: $bg-blue;
+  width: 45px;
+  height: 45px;
+  box-shadow: 2px 2px 2px 0 $basic-black;
+  text-align: center;
+  border-radius: 2px;
+
+  &:hover {
+    .socials__img path {
+      background-color: $bg-orange;
+    }
+  }
 }

@@ -4,6 +4,10 @@
   padding: 0 0 0 0;
 }
 
+.docs__item {
+  margin-bottom: 10px;
+}
+
 .docs__name {
   font-weight: 300;
   font-size: calc((1vw + 1vh)*.7);
@@ -17,4 +21,5 @@
   opacity: 0;
   visibility: hidden;
   height: 1px;
+  display: block;
 }
