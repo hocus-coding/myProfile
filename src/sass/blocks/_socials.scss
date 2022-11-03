@@ -1,9 +1,11 @@
 .socials {
   list-style: none;
-  margin: 0 0 0 0;
+  margin: 0 auto;
   padding: 0 0 0 0;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  align-self: flex-end;
 }
 
 .socials__link {
@@ -12,7 +14,7 @@
   align-items: center;
   text-decoration: none;
   background-color: rgba($basic-white, 0.03);
-  color: $bg-orange;
+  color: $bg-blue;
   width: 40px;
   height: 40px;
   box-shadow: 2px 2px 2px 0 $basic-black;
