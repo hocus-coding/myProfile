@@ -4,7 +4,7 @@
   padding: 0 0 0 0;
 }
 
-.docs__item {
+.docs__item:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -15,6 +15,16 @@
   display: block;
   color: $btn-decor;
   cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba($btn-decor, 0.5);
+  }
 }
 
 .docs__sertificate {

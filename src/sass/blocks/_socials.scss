@@ -3,8 +3,7 @@
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   display: flex;
-  gap: 20px;
-  // align-items: center;
+  gap: 15px;
 }
 
 .socials__link {
@@ -13,16 +12,31 @@
   align-items: center;
   text-decoration: none;
   background-color: rgba($basic-white, 0.03);
-  color: $bg-blue;
-  width: 45px;
-  height: 45px;
+  color: $bg-orange;
+  width: 40px;
+  height: 40px;
   box-shadow: 2px 2px 2px 0 $basic-black;
   text-align: center;
   border-radius: 2px;
 
+  &:focus {
+    outline: none;
+    box-shadow: 2px 2px 2px 0 $basic-black,
+      -1px -1px 0 0 rgba($basic-white, 0.5);
+  }
+
+  &:active {
+    color: $bg-dark-brown;
+  }
+
   &:hover {
-    .socials__img path {
-      background-color: $bg-orange;
+    use {
+      transform: scale(-1, 1);
     }
   }
+}
+
+.socials__img use {
+  transform-origin: center;
+  transition: all 0.4s ease;
 }
