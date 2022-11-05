@@ -102,7 +102,7 @@
           <div class="form__container">
             <div class="form__content">
               <h2 class="form__title">
-                Давайте создадим что-то необычное?
+                Давайте создадим что-нибудь необычное?
               </h2>
               <p class="form__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores nostrum, facere alias optio libero cum
@@ -155,12 +155,14 @@
       <p class="main-footer__docs-title">Образование:</p>
       <ul class="docs">
         <li class="docs__item">
-          <b class="docs__name" tabindex="0">Сертификат №1</b>
-          <img class="docs__sertificate" src="img/sertificate-1.png" alt="Сертификат №1" width="300" height="420">
+          <b class="docs__name docs__name--one" tabindex="0" aria-label="первый сертификат">Сертификат</b>
+          <div class="docs__sertificate docs__sertificate--one">
+            <img class="docs__sertificate-one" src="img/sertificate-1.png" alt="Сертификат №1" width="615" height="864">
+          </div>
         </li>
         <li class="docs__item">
-          <b class="docs__name" tabindex="0">Сертификат №2</b>
-          <img class="docs__sertificate" src="" alt="Сертификат №2" width="100" height="300">
+          <b class="docs__name docs__name--two" tabindex="0" aria-label="второй сертификат">ещё Сертификат</b>
+          <img class="docs__sertificate docs__sertificate--two" src="" alt="Сертификат №2" width="100" height="300">
         </li>
       </ul>
     </div>
@@ -201,9 +203,6 @@
         &#169 Dmitry Lysogor with <span class="main-footer__copyright-text-symbol">&#x2661</span>
       </p>
     </div>
-
-
-
 
   </footer>
 </body>

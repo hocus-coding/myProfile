@@ -1,9 +1,9 @@
 .field-item {
   position: relative;
 
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 15px;
-  }
+  // @media (max-width: $mobile-width-only) {
+  //   margin-bottom: 15px;
+  // }
 }
 
 .field-item__input {
@@ -15,6 +15,10 @@
   &--area {
     @media (max-width: $mobile-width-only) {
       min-height: 70px;
+    }
+
+    @media (max-height: 450px) {
+      height: 100%;
     }
 
     padding-top: 8px;

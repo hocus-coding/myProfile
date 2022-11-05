@@ -4,13 +4,12 @@
   padding: 0 0 0 0;
 }
 
-.docs__item:not(:last-child) {
+.docs__item {
   margin-bottom: 10px;
 }
 
 .docs__name {
   font-weight: 300;
-  font-size: calc((1vw + 1vh)*.7);
   line-height: 1;
   display: block;
   color: $btn-decor;
@@ -18,6 +17,11 @@
   outline: none;
   transition: color 0.5s ease;
   letter-spacing: 0.5px;
+  font-size: 0.6rem;
+
+  @media(max-width: $mobile-width-only) {
+    font-size: 1.3rem;
+  }
 
   &:focus {
     text-decoration: underline;
@@ -28,9 +32,33 @@
   }
 }
 
+.docs__sertificate-one {
+  object-fit: contain;
+}
+
 .docs__sertificate {
+  position: absolute;
   opacity: 0;
   visibility: hidden;
-  height: 1px;
+  // height: auto;
+  width: calc($index * 15);
   display: block;
+  left: -100px;
+  top: -70vh;
+
+  @media(max-width: $mobile-width-only) {
+    width: 150px;
+    top: -230px;
+    left: -100px;
+  }
+}
+
+.docs__sertificate--one {
+  opacity: 1;
+  visibility: visible;
+}
+
+.docs__sertificate--two {
+  opacity: 0;
+  visibility: hidden;
 }
