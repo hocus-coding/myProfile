@@ -7,27 +7,27 @@
 }
 
 .field-item__input {
-  @media (max-width: $mobile-width-only) {
-    min-height: 20px;
+  @media (max-width: $desktop-width) {
+    min-height: 15px;
     padding-left: 3px;
   }
 
   &--area {
-    @media (max-width: $mobile-width-only) {
-      min-height: 70px;
+    @media (max-width: $desktop-width) {
+      min-height: 60px;
     }
 
     @media (max-height: 450px) {
       height: 100%;
     }
 
-    padding-top: 8px;
+    padding-top: 5px;
     resize: none;
-    min-height: 140px;
+    min-height: 120px;
   }
 
   width: 100%;
-  min-height: 38px;
+  min-height: 30px;
   font-family: inherit;
   font-size: 1rem;
   font-weight: 300;
@@ -50,7 +50,7 @@
   &:focus~.field-item__name,
   &:not(:placeholder-shown)~.field-item__name {
     font-size: calc($index * 0.4);
-    transform: translate(15px, -9px);
+    transform: translate(12px, -9px);
     background-color: $bg-blue;
     color: $basic-dark;
     padding: 3px 5px;

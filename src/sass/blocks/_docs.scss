@@ -40,25 +40,24 @@
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  // height: auto;
+  height: auto;
   width: calc($index * 15);
   display: block;
-  left: -100px;
-  top: -70vh;
+  left: 0;
+  top: 0;
+  transform: translateY(-102%);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 
   @media(max-width: $mobile-width-only) {
-    width: 150px;
-    top: -230px;
-    left: -100px;
+    width: 200px;
+    left: -38vw;
   }
 }
 
-.docs__sertificate--one {
+.docs__name--one:hover~.docs__sertificate--one,
+.docs__name--two:hover~.docs__sertificate--two,
+.docs__name--one:focus~.docs__sertificate--one,
+.docs__name--two:focus~.docs__sertificate--two {
   opacity: 1;
   visibility: visible;
-}
-
-.docs__sertificate--two {
-  opacity: 0;
-  visibility: hidden;
 }
