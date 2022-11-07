@@ -1,5 +1,5 @@
 .page {
-  font-family: "Arial", sans-serif;
+  font-family: "Rubik", "Arial", sans-serif;
   height: 100%;
   font-size: calc($index * 0.9);
   line-height: 1.8;
@@ -12,5 +12,4 @@
   min-height: 100%;
   height: $depth;
   margin: 0 auto;
-  //box-sizing: border-box;
 }

@@ -1,0 +1,31 @@
+@keyframes loading {
+  0% {
+    transform: translateX(0) translateY(0);
+    background-color: $bg-blue;
+    box-shadow: 0 0 10px $bg-blue;
+  }
+
+  25% {
+    transform: translateX(13px) rotate(90deg);
+    background-color: $invalid-color;
+    box-shadow: 0 0 10px $invalid-color;
+  }
+
+  50% {
+    transform: translateX(13px) translateY(-13px) rotate(180deg);
+    background-color: $bg-dark-gray;
+    box-shadow: 0 0 10px $bg-dark-gray;
+  }
+
+  75% {
+    transform: translateX(0) translateY(-13px) rotate(270deg);
+    background-color: $btn-decor;
+    box-shadow: 0 0 10px $btn-decor;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    background-color: $bg-blue;
+    box-shadow: 0 0 10px $bg-blue;
+  }
+}

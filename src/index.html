@@ -8,7 +8,7 @@
   <title>Dmitry Lysogor web developer</title>
   <link rel="stylesheet" href="css/style.min.css">
   <!-- <link rel="manifest" href="manifest.webmanifest"> -->
-  <script src="js/script.min.js" defer></script>
+  <script src="js/script.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -18,6 +18,7 @@
   <div class="container">
     <main class="main-content">
       <section class="gallery">
+
         <div class="frame frame--bg">
           <div class="frame__content">
             <h1 class="frame__title">
@@ -25,7 +26,9 @@
             </h1>
           </div>
         </div>
+
         <div class="frame"></div>
+
         <div class="frame">
           <div class="frame__content">
             <img class="frame__image frame__image--vertical" src="img/myself-22.jpg""
@@ -47,7 +50,16 @@
             </h3>
             <p class="frame__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, pariatur tempora rerum distinctio id
-              necessitatibus iusto consectetur saepe at amet repudiandae sunt, facilis culpa nisi harum fugiat maxime
+              necessitatibus iusto consectetur sLorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia,
+              pariatur tempora rerum distinctio id
+              necessitatibus iusto consectetur saepe at amLorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quia, pariatur tempora rerum distinctio id
+              necessitatibus iusto consectetur saepe at amLorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quia, pariatur tempora rerum distinctio id
+              necessitatibus iusto consectetur saepe at amLorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              quia, pariatur tempora rerum distinctio id
+              necessitatibus iusto consectetur saepe at amaepe at amet repudiandae sunt, facilis culpa nisi harum fugiat
+              maxime
               odio.
             </p>
           </div>
@@ -61,18 +73,24 @@
             <p class="frame__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, pariatur tempora rerum distinctio id
               necessitatibus iusto consectetur saepe at amet repudiandae sunt, facilis culpa nisi harum fugiat maxime
+              odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, pariatur tempora rerum
+              distinctio id
+              necessitatibus iusto consectetur saepe at amet repudiandae sunt, facilis culpa nisi harum fugiat maxime
+              odio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quia, pariatur tempora rerum
+              distinctio id
+              necessitatibus iusto consectetur saepe at amet repudiandae sunt, facilis culpa nisi harum fugiat maxime
               odio.
             </p>
           </div>
         </div>
         <div class="frame"></div>
-        <div class="frame">
+        <div class="frame frame--bg">
           <div class="frame__content">
             <img class="frame__image frame__image--vertical" src="img/myself-3.jpg""
               alt=" фото рук на ноутбуке" width="300" height="150">
           </div>
         </div>
-
+        <div class="frame"></div>
         <div class="frame">
           <div class="frame__content">
             <img class="frame__image frame__image--right" src="img/myself-11.jpg""
@@ -84,13 +102,13 @@
           <div class="form__container">
             <div class="form__content">
               <h2 class="form__title">
-                Обсудим ваш проект?
+                Давайте создадим что-нибудь необычное?
               </h2>
               <p class="form__text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores nostrum, facere alias optio libero cum
                 consectetur.
               </p>
-              <form class="feedback" action="" novalidate method="post" id="form">
+              <form class="feedback" novalidate id="form">
                 <ul class="feedback__list">
                   <li class="feedback__item field-item">
                     <input class="field-item__input field-item__input--requed" type="text" name="name" id="name"
@@ -129,6 +147,65 @@
     </main>
   </div>
   <footer class="main-footer">
+    <div class="main-footer__works works">
+      <p class="works__text">Ещё работы:</p>
+      <a class="works__link" href="#">Седона</a>
+    </div>
+    <div class="main-footer__docs">
+      <p class="main-footer__docs-title">Образование:</p>
+      <ul class="docs">
+        <li class="docs__item">
+          <b class="docs__name docs__name--one" tabindex="0" aria-label="первый сертификат">Сертификат</b>
+          <div class="docs__sertificate docs__sertificate--one">
+            <img class="docs__sertificate-one" src="img/sertificate-1.png" alt="Сертификат №1" width="615" height="864">
+          </div>
+        </li>
+        <li class="docs__item">
+          <b class="docs__name docs__name--two" tabindex="0" aria-label="второй сертификат">ещё Сертификат</b>
+          <div class="docs__sertificate docs__sertificate--two">
+            <img class="docs__sertificate-two" src="img/sertificate-2.png"" alt=" Сертификат №2" width="615"
+              height="864">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="main-footer__socials socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--vk" href="https://vk.com/hocus" aria-label="Дмитрий вконтакте"
+          target="_blank">
+          <svg class="socials__img" role="img" aria-label="Логотип vkontakte" width="30" height="30">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--tele" href="https://t.me/Hoqus" aria-label="Дмитрий в телеграме"
+          target="_blank">
+          <svg class="socials__img" role="img" aria-label="Логотип telegram" width="30" height="30">
+            <use href="img/sprite.svg#telegram"></use>
+          </svg></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--dis" href="https://discord.gg/GcvBfkH" aria-label="Дискорд Дмитрия"
+          target="_blank">
+          <svg class="socials__img" role="img" aria-label="Логотип discord" width="33" height="33">
+            <use href="img/sprite.svg#discord"></use>
+          </svg></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--github" href="https://github.com/hocus-coding"
+          aria-label="Гитхаб Дмитрия" target="_blank">
+          <svg class="socials__img" role="img" aria-label="Логотип github" width="30" height="30">
+            <use href="img/sprite.svg#github"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="main-footer__copyright">
+      <p class="main-footer__copyright-text">
+        &#169 Dmitry Lysogor with <span class="main-footer__copyright-text-symbol">&#x2661</span>
+      </p>
+    </div>
 
   </footer>
 </body>

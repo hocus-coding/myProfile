@@ -1,0 +1,63 @@
+.docs {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.docs__item {
+  margin-bottom: 10px;
+}
+
+.docs__name {
+  font-weight: 300;
+  line-height: 1;
+  display: block;
+  color: $btn-decor;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.5s ease;
+  letter-spacing: 0.5px;
+  font-size: 0.6rem;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 1.3rem;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba($btn-decor, 0.5);
+  }
+}
+
+.docs__sertificate-one {
+  object-fit: contain;
+}
+
+.docs__sertificate {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  height: auto;
+  width: calc($index * 15);
+  display: block;
+  left: 0;
+  top: 0;
+  transform: translateY(-102%);
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  @media (max-width: $mobile-width-only) {
+    width: 200px;
+    left: -38vw;
+  }
+}
+
+.docs__name--one:hover~.docs__sertificate--one,
+.docs__name--two:hover~.docs__sertificate--two,
+.docs__name--one:focus~.docs__sertificate--one,
+.docs__name--two:focus~.docs__sertificate--two {
+  opacity: 1;
+  visibility: visible;
+}

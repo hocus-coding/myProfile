@@ -1,6 +1,7 @@
+@import "global/_variables";
 @import "global/_global";
 @import "global/_fonts";
-@import "global/_variables";
+@import "global/_keyframes";
 
 // Blocks
 
@@ -14,3 +15,7 @@
 @import "blocks/_form";
 @import "blocks/_feedback";
 @import "blocks/_field-item";
+@import "blocks/_main-footer";
+@import "blocks/_works";
+@import "blocks/_docs";
+@import "blocks/_socials";
