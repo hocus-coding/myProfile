@@ -22,7 +22,7 @@
     width: 10px;
     height: 10px;
     background-color: $bg-blue;
-    border: 2px solid white;
+    border: 2px solid $basic-white;
     animation-name: loading;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;

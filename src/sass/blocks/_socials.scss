@@ -6,11 +6,11 @@
   justify-content: center;
   gap: 10px;
 
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     grid-column: span 2;
   }
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     align-self: end;
     justify-self: start;
   }

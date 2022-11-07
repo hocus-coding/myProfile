@@ -8,12 +8,12 @@
   box-sizing: border-box;
   padding: 10px 30px 20px;
 
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     padding: 10px 20px 20px;
     row-gap: 10px;
   }
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -22,7 +22,7 @@
   text-align: center;
   position: relative;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     justify-self: start;
   }
 }
@@ -34,7 +34,7 @@
   letter-spacing: 0.5px;
   font-size: 0.7rem;
 
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     font-size: 1.3rem;
   }
 }
@@ -42,12 +42,12 @@
 .main-footer__copyright {
   align-self: end;
 
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     grid-column: span 2;
     font-size: 1rem;
   }
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     justify-self: end;
   }
 }
