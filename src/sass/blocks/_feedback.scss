@@ -80,7 +80,8 @@
   width: 100%;
   max-width: 180px;
   color: $btn-decor;
-  letter-spacing: 0.8px;
+  line-height: 1.1;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
   display: block;
   margin-left: auto;
@@ -89,7 +90,7 @@
   font-family: inherit;
   font-size: 0.7rem;
   font-weight: 500;
-  transition: color 0.5s ease, background-color 1.7s ease;
+  transition: color 0.5s ease;
 
   @media (max-width: $mobile-width-only) {
     padding: 6px 10px;
@@ -112,9 +113,11 @@
     width: 100%;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $btn-decor;
+  &:hover {
     color: $basic-dark;
+  }
+
+  &:focus {
+    text-decoration: underline;
   }
 }
