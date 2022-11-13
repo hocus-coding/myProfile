@@ -1,0 +1,73 @@
+.tools {
+  position: absolute;
+  padding: 10px;
+  // top: -10vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.tools__title {
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: calc($index * 1.5);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.tools__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 0;
+  line-height: 0;
+
+  display: grid;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    ". gu . sa . gu1"
+    "sa1 . gu2 . sa2 ."
+    ". gu3 . sa3 . gu4"
+  ;
+}
+
+.tools__item--gu {
+  grid-area: gu;
+}
+
+.tools__item--sa {
+  grid-area: sa;
+}
+
+.tools__item--gu1 {
+  grid-area: gu1;
+}
+
+.tools__item--sa1 {
+  grid-area: sa1;
+}
+
+.tools__item--gu2 {
+  grid-area: gu2;
+}
+
+.tools__item--sa2 {
+  grid-area: sa2;
+}
+
+.tools__item--gu3 {
+  grid-area: gu3;
+}
+
+.tools__item--sa3 {
+  grid-area: sa3;
+}
+
+.tools__item--gu4 {
+  grid-area: gu4;
+}

@@ -1,12 +1,15 @@
 // Scroll 3D
 
 let page = document.querySelector('.page');
+let footer = document.querySelector('.main-footer');
 let popup = document.querySelector('.form__container');
 let zSpacing = -1000;
 let lastPosition = zSpacing / 5;
 let $frames = document.getElementsByClassName('frame');
 frames = Array.from($frames);
 zVals = [];
+
+footer.classList.add('main-footer--hidden');
 
 window.onscroll = function () {
   let top = document.documentElement.scrollTop;
@@ -39,8 +42,10 @@ window.onscroll = function () {
 
   if (comparison()) {
     popup.classList.add('form__container--show');
+    footer.classList.remove('main-footer--hidden');
   } else {
     popup.classList.remove('form__container--show');
+    footer.classList.add('main-footer--hidden');
   }
 };
 
