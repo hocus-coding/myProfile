@@ -1,7 +1,7 @@
 .tools {
   position: absolute;
   padding: 10px;
-  // top: -10vh;
+  // top: 5vh;
   left: 50%;
   transform: translate(-50%);
 }
@@ -14,7 +14,7 @@
   letter-spacing: 0.5px;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .tools__list {
@@ -27,12 +27,12 @@
   gap: 5px;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    ". gu . sa . gu1"
-    "sa1 . gu2 . sa2 ."
-    ". gu3 . sa3 . gu4"
+    ". gu . sa . gu1 ."
+    "sa1 . gu2 . sa2 . gu5"
+    ". gu3 . sa3 . gu4 ."
   ;
 }
 
@@ -70,4 +70,8 @@
 
 .tools__item--gu4 {
   grid-area: gu4;
+}
+
+.tools__item--gu5 {
+  grid-area: gu5;
 }
