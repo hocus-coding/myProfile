@@ -21,57 +21,65 @@
   list-style: none;
   padding-left: 0;
   margin: 0 0 0 0;
-  line-height: 0;
 
   display: grid;
-  gap: 5px;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  // grid-template-columns: repeat(7, 1fr);
+  // grid-template-rows: repeat(3, auto);
   grid-template-areas:
-    ". gu . sa . gu1 ."
-    "sa1 . gu2 . sa2 . gu5"
-    ". gu3 . sa3 . gu4 ."
+    ". ht . cs . js ."
+    "gi . sa . no . gu"
+    ". ph . fi . il ."
   ;
+
+  @media(min-width: $tablet-width) {
+    gap: 15px;
+  }
 }
 
-.tools__item--gu {
-  grid-area: gu;
+.tools__img {
+  width: 100%;
+  // height: 50px;
+  // max-width: 100px;
+}
+
+.tools__item--ht {
+  grid-area: ht;
+}
+
+.tools__item--cs {
+  grid-area: cs;
+}
+
+.tools__item--js {
+  grid-area: js;
+}
+
+.tools__item--gi {
+  grid-area: gi;
 }
 
 .tools__item--sa {
   grid-area: sa;
 }
 
-.tools__item--gu1 {
-  grid-area: gu1;
+.tools__item--no {
+  grid-area: no;
 }
 
-.tools__item--sa1 {
-  grid-area: sa1;
+.tools__item--gu {
+  grid-area: gu;
 }
 
-.tools__item--gu2 {
-  grid-area: gu2;
+.tools__item--ph {
+  grid-area: ph;
 }
 
-.tools__item--sa2 {
-  grid-area: sa2;
+.tools__item--fi {
+  grid-area: fi;
 }
 
-.tools__item--gu3 {
-  grid-area: gu3;
-}
-
-.tools__item--sa3 {
-  grid-area: sa3;
-}
-
-.tools__item--gu4 {
-  grid-area: gu4;
-}
-
-.tools__item--gu5 {
-  grid-area: gu5;
+.tools__item--il {
+  grid-area: il;
 }
