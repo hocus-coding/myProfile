@@ -29,3 +29,21 @@
     box-shadow: 0 0 10px $bg-blue;
   }
 }
+
+@keyframes fly {
+  0% {
+    transform: translateY(-7px);
+  }
+
+  // 25% {
+  //   transform: translateY(-10px);
+  // }
+
+  // 50% {
+  //   transform: translateY(0px);
+  // }
+
+  100% {
+    transform: translateY(7px);
+  }
+}
