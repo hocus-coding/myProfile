@@ -11,7 +11,7 @@
   font-weight: 300;
   font-size: calc($index * 1.3);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   text-align: center;
   margin-top: 0;
   margin-bottom: 40px;
@@ -45,13 +45,13 @@
 .tools__img {
   width: 100%;
   animation-name: fly;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
   @media(max-width: $mobile-width-only) {
     height: 40px;
+    animation-name: fly-m;
   }
 
   &--js {
@@ -87,7 +87,7 @@
   }
 
   &--lustra {
-    animation-delay: 1.1s;
+    animation-delay: 1.3s;
   }
 }
 
@@ -105,26 +105,17 @@
 
 .tools__item--gi {
   grid-area: gi;
-
-  @media(max-width: $mobile-width-only) {
-    width: 150%;
-  }
+  width: 140%;
 }
 
 .tools__item--sa {
   grid-area: sa;
-
-  @media(max-width: $mobile-width-only) {
-    width: 150%;
-  }
+  width: 130%;
 }
 
 .tools__item--no {
   grid-area: no;
-
-  @media(max-width: $mobile-width-only) {
-    width: 140%;
-  }
+  width: 150%;
 }
 
 .tools__item--gu {
