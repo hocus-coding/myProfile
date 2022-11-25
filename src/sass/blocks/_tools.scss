@@ -1,7 +1,6 @@
 .tools {
   position: absolute;
   padding: 10px;
-  // top: 5vh;
   left: 50%;
   transform: translate(-50%);
 }
@@ -16,7 +15,7 @@
   margin-top: 0;
   margin-bottom: 40px;
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 80px;
   }
 }
@@ -32,13 +31,12 @@
   grid-template-areas:
     ". ht . js . cs ."
     "gi . sa . no . gu"
-    ". ph . fi . il ."
-  ;
+    ". ph . fi . il .";
   row-gap: 10px;
   column-gap: 3px;
 
-  @media(min-width: $tablet-width) {
-    gap: 20px
+  @media (min-width: $tablet-width) {
+    gap: 20px;
   }
 }
 
@@ -49,7 +47,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
-  @media(max-width: $mobile-width-only) {
+  @media (max-width: $mobile-width-only) {
     height: 40px;
     animation-name: fly-m;
   }

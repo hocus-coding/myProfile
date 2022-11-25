@@ -2,16 +2,19 @@
   opacity: 0;
   position: absolute;
   background-color: $basic-dark;
-  background-image: url("../img/myself-33.jpg");
+  background-image: url("../img/im-5.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 1px;
+  height: 0;
   top: 45%;
   transition: top 1s ease, height 1s ease, opacity 1.7s ease;
   z-index: 1;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/im-5@2x.webp");
+  }
 
   &--show {
     height: 100%;

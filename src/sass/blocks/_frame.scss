@@ -30,10 +30,9 @@
   text-align: center;
   font-size: calc($index * 2);
   line-height: 1.1;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   margin-top: 0;
   margin-bottom: 0;
-  text-align: center;
   border-right: 2px solid rgba($basic-white, 0.7);
   animation: typing 4s steps(45) normal, blink 0.8s 10 forwards;
   white-space: nowrap;
@@ -73,7 +72,6 @@
 }
 
 .frame__content {
-
   &--text-right {
     position: relative;
     max-width: 35%;
