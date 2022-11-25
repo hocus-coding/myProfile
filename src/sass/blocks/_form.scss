@@ -2,7 +2,7 @@
   opacity: 0;
   position: absolute;
   background-color: $basic-dark;
-  background-image: url("../img/im-5.webp");
+  background-image: url("../img/im-5.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,7 +13,7 @@
   z-index: 1;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/im-5@2x.webp");
+    background-image: url("../img/im-5@2x.jpg");
   }
 
   &--show {
@@ -23,7 +23,6 @@
 
     .form__content {
       transition: height 1s ease, opacity 1s ease;
-      height: 100%;
       overflow: visible;
       opacity: 1;
     }
@@ -45,7 +44,7 @@
   opacity: 0;
   height: 0;
   overflow: hidden;
-  padding-top: 40px;
+  padding-top: 30px;
   max-width: 600px;
 
   @media (min-width: $tablet-width) {
@@ -73,6 +72,7 @@
     margin-bottom: 20px;
     line-height: 1.2;
     font-weight: 300;
+    font-size: 1rem;
 
     @media (max-width: $mobile-width-only) {
       margin-bottom: 15px;
