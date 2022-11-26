@@ -73,3 +73,15 @@
     border-right-color: transparent;
   }
 }
+
+@keyframes popup {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes popupoff {
+  100% {
+    transform: translateX(100%);
+  }
+}

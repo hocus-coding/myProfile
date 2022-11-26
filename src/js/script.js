@@ -3,6 +3,8 @@
 let page = document.querySelector('.page');
 let footer = document.querySelector('.main-footer');
 let popup = document.querySelector('.form__container');
+let alertSuccess = document.querySelector('.popup--success');
+let alertFailed = document.querySelector('.popup--failed');
 let zSpacing = -1000;
 let lastPosition = zSpacing / 5;
 let $frames = document.getElementsByClassName('frame');
@@ -63,6 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let error = formValidate(form);
 
     if (error === 0) {
+      alertSuccess.classList.add('popup--success-show');
+      setTimeout(() => {
+        alertSuccess.classList.remove('popup--success-show');
+      },
+        6000
+      );
       form.classList.add('feedback--sending');
       Email.send({
         SecureToken: 'ab62c18f-42ed-4ba0-b73c-922452d4f357',
@@ -74,13 +82,18 @@ document.addEventListener('DOMContentLoaded', function () {
           + '<br> Email: ' + document.getElementById('email').value
           + '<br> Message: ' + document.getElementById('message').value
       }).then(
-        message => alert(message),
         form.reset(),
-        form.classList.remove('feedback--sending')
+        form.classList.remove('feedback--sending'),
       );
 
     } else {
-      alert('Заполните обязательные поля');
+      // alert('Заполните обязательные поля');
+      alertFailed.classList.add('popup--failed-show');
+      setTimeout(() => {
+        alertFailed.classList.remove('popup--failed-show');
+      },
+        6000
+      );
       form.classList.remove('feedback--sending')
     }
   }
