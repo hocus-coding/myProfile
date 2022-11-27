@@ -89,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
       );
 
     } else {
-      // alert('Заполните обязательные поля');
       alertFailed.classList.add('popup--failed-show');
       setTimeout(() => {
         alertFailed.classList.remove('popup--failed-show');
