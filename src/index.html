@@ -18,6 +18,17 @@
 <body class="page__body">
 
   <header class="main-header">
+    <div class="main-header__content">
+      <button class="main-header__button main-header__button--pause" aria-label="вкл выкл музыку">
+        <span class="main-header__button-animation"></span>
+        <span class="main-header__button-animation"></span>
+        <span class="main-header__button-animation"></span>
+        <span class="main-header__button-animation"></span>
+        <span class="main-header__button-animation"></span>
+      </button>
+      <audio class="main-header__audio" src="audio/HappyDay.mp3" loop></audio>
+    </div>
+
   </header>
 
   <div class="container">
@@ -272,15 +283,21 @@
         <li class="docs__item">
           <b class="docs__name docs__name--one" tabindex="0" aria-label="первый сертификат">Сертификат</b>
           <div class="docs__sertificate docs__sertificate--one">
-            <img class="docs__sertificate-one" src="img/sertificate-1.webp" alt="Сертификат №1" width="615"
-              height="864">
+            <picture class="docs__sertificate-one">
+              <source type="image/webp" srcset="img/sertificate-1.webp 1x, img/sertificate-1@2x.webp 2x">
+              <img src="img/sertificate-1.png" srcset="img/sertificate-1@2x.png 2x" alt="Сертификат №1" width="615"
+                height="864">
+            </picture>
           </div>
         </li>
         <li class="docs__item">
           <b class="docs__name docs__name--two" tabindex="0" aria-label="второй сертификат">ещё Сертификат</b>
           <div class="docs__sertificate docs__sertificate--two">
-            <img class="docs__sertificate-two" src="img/sertificate-2.webp" alt=" Сертификат №2" width="615"
-              height="864">
+            <picture class="docs__sertificate-two">
+              <source type="image/webp" srcset="img/sertificate-2.webp 1x, img/sertificate-2@2x.webp 2x">
+              <img src="img/sertificate-2.jpg" srcset="img/sertificate-2@2x.png 2x" alt=" Сертификат №2" width="615"
+                height="864">
+            </picture>
           </div>
         </li>
       </ul>
