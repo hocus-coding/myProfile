@@ -1,12 +1,19 @@
 // Scroll 3D
 
 let page = document.querySelector('.page');
+let footer = document.querySelector('.main-footer');
 let popup = document.querySelector('.form__container');
+let alertSuccess = document.querySelector('.popup--success');
+let alertFailed = document.querySelector('.popup--failed');
+let mp3Button = document.querySelector('.main-header__button');
+let mp3Audio = document.querySelector('.main-header__audio');
 let zSpacing = -1000;
 let lastPosition = zSpacing / 5;
 let $frames = document.getElementsByClassName('frame');
 frames = Array.from($frames);
 zVals = [];
+
+footer.classList.add('main-footer--hidden');
 
 window.onscroll = function () {
   let top = document.documentElement.scrollTop;
@@ -39,8 +46,10 @@ window.onscroll = function () {
 
   if (comparison()) {
     popup.classList.add('form__container--show');
+    footer.classList.remove('main-footer--hidden');
   } else {
     popup.classList.remove('form__container--show');
+    footer.classList.add('main-footer--hidden');
   }
 };
 
@@ -58,6 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let error = formValidate(form);
 
     if (error === 0) {
+      alertSuccess.classList.add('popup--success-show');
+      setTimeout(() => {
+        alertSuccess.classList.remove('popup--success-show');
+      },
+        6000
+      );
       form.classList.add('feedback--sending');
       Email.send({
         SecureToken: 'ab62c18f-42ed-4ba0-b73c-922452d4f357',
@@ -69,13 +84,18 @@ document.addEventListener('DOMContentLoaded', function () {
           + '<br> Email: ' + document.getElementById('email').value
           + '<br> Message: ' + document.getElementById('message').value
       }).then(
-        message => alert(message),
         form.reset(),
-        form.classList.remove('feedback--sending')
+        form.classList.remove('feedback--sending'),
       );
 
     } else {
-      alert('Заполните обязательные поля');
+      // alert('Заполните обязательные поля');
+      alertFailed.classList.add('popup--failed-show');
+      setTimeout(() => {
+        alertFailed.classList.remove('popup--failed-show');
+      },
+        6000
+      );
       form.classList.remove('feedback--sending')
     }
   }
@@ -117,6 +137,22 @@ document.addEventListener('DOMContentLoaded', function () {
     return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });
+
+// Audio mp3
+
+mp3Button.addEventListener('click', e => {
+  mp3Button.classList.toggle('main-header__button--pause');
+  mp3Audio.paused ? mp3Audio.play() : mp3Audio.pause();
+})
+
+window.onfocus = function () {
+  mp3Button.classList.contains('main-header__button--pause') ? mp3Audio.pause() : mp3Audio.play();
+}
+
+window.onblur = function () {
+  mp3Audio.pause();
+}
+
 
 /* Email send SmtpJS.com - v3.0.0 */
 var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };

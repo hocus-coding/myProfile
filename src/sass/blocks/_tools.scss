@@ -1,0 +1,133 @@
+.tools {
+  position: absolute;
+  padding: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.tools__title {
+  line-height: 1.2;
+  font-weight: 300;
+  font-size: calc($index * 1.3);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.tools__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 0;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+    ". ht . js . cs ."
+    "gi . sa . no . gu"
+    ". ph . fi . il .";
+  row-gap: 10px;
+  column-gap: 3px;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.tools__img {
+  width: 100%;
+  animation-name: fly;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  @media (max-width: $mobile-width-only) {
+    height: 40px;
+    animation-name: fly-m;
+  }
+
+  &--js {
+    animation-delay: 1s;
+  }
+
+  &--cs {
+    animation-delay: 2s;
+  }
+
+  &--git {
+    animation-delay: 0.7s;
+  }
+
+  &--sass {
+    animation-delay: 1.6s;
+  }
+
+  &--node {
+    animation-delay: 0.4s;
+  }
+
+  &--gulp {
+    animation-delay: 2.3s;
+  }
+
+  &--photo {
+    animation-delay: 0.9s;
+  }
+
+  &--figma {
+    animation-delay: 1.9s;
+  }
+
+  &--lustra {
+    animation-delay: 1.3s;
+  }
+}
+
+.tools__item--ht {
+  grid-area: ht;
+}
+
+.tools__item--cs {
+  grid-area: cs;
+}
+
+.tools__item--js {
+  grid-area: js;
+}
+
+.tools__item--gi {
+  grid-area: gi;
+  width: 140%;
+}
+
+.tools__item--sa {
+  grid-area: sa;
+  width: 120%;
+}
+
+.tools__item--no {
+  grid-area: no;
+  width: 150%;
+}
+
+.tools__item--gu {
+  grid-area: gu;
+}
+
+.tools__item--ph {
+  grid-area: ph;
+}
+
+.tools__item--fi {
+  grid-area: fi;
+}
+
+.tools__item--il {
+  grid-area: il;
+}
