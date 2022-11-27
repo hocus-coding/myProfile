@@ -95,6 +95,7 @@ const copy = (done) => {
     'src/*.ico',
     'src/*.webmanifest',
     'src/img/icons/*.svg',
+    'src/audio/*.mp3',
   ], {
     base: 'src'
   })
