@@ -47,11 +47,7 @@ window.onscroll = function () {
   if (comparison()) {
     popup.classList.add('form__container--show');
     footer.classList.remove('main-footer--hidden');
-    console.log(pageHeight + ' клиент хеит');
-    console.log(scrolled + ' скрол топ');
   } else {
-    console.log(pageHeight + ' клиент хеит');
-    console.log(scrolled + ' скрол топ');
     popup.classList.remove('form__container--show');
     footer.classList.add('main-footer--hidden');
   }
