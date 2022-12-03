@@ -47,6 +47,10 @@
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
+  &:hover {
+    animation-play-state: paused;
+  }
+
   @media (max-width: $mobile-width-only) {
     height: 40px;
     animation-name: fly-m;
