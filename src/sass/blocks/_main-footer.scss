@@ -19,7 +19,8 @@
   }
 
   &--hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -35,9 +36,9 @@
 .main-footer__docs-title {
   margin-top: 0;
   margin-bottom: 8px;
-  line-height: 1;
+  line-height: 1.1;
   letter-spacing: 0.5px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 
   @media (max-width: $mobile-width-only) {
     font-size: 1.3rem;

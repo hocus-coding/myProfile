@@ -10,14 +10,14 @@
 
 .docs__name {
   font-weight: 300;
-  line-height: 1;
+  line-height: 1.1;
   display: block;
   color: $btn-decor;
   cursor: pointer;
   outline: none;
   transition: color 0.5s ease;
   letter-spacing: 0.5px;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 
   @media (max-width: $mobile-width-only) {
     font-size: 1.3rem;

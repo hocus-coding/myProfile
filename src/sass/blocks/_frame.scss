@@ -2,14 +2,16 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-items: center;
   align-items: center;
   transition: $transition, opacity 0.7s ease;
   will-change: transform;
   transform-style: preserve-3d;
 
   &--bg {
+    pointer-events: none;
+
     &::before {
       content: "";
       position: absolute;
@@ -56,7 +58,9 @@
     left: calc($side-big / 2 * $index + $gutter);
 
     @media (max-width: $mobile-width-only) {
-      left: calc($side-big / 2.3 * $index + $gutter);
+      left: calc($side-big / 2 * $index + $gutter / 7);
+      width: calc($index * ($side-big - 7.2));
+      height: calc($index * ($side-small - 5.2));
     }
   }
 
@@ -66,7 +70,9 @@
     right: calc($side-small / 2 * $index + $gutter);
 
     @media (max-width: $mobile-width-only) {
-      right: calc($side-small / 2.3 * $index + $gutter);
+      right: calc($side-small / 2 * $index + $gutter / 7);
+      width: calc($index * ($side-small - 5.2));
+      height: calc($index * ($side-big - 7.2));
     }
   }
 }
