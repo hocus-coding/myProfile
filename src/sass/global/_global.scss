@@ -7,16 +7,18 @@ input {
   color-scheme: dark;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: $bg-dark-gray;
-}
+@media (min-width: 900px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: $bg-dark-gray;
+  }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background: linear-gradient(transparent, rgba($bg-blue, 1));
-}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: linear-gradient(transparent, rgba($bg-blue, 1));
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, rgba($bg-blue, 0.6));
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, rgba($bg-blue, 0.6));
+  }
 }
