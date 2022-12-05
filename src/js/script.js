@@ -29,7 +29,7 @@ window.onscroll = function () {
     frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`);
   });
 
-  let pageHeight = page.clientHeight;
+  let pageHeight = window.innerHeight;
   let scrollH = page.scrollHeight;
   let scrolled = page.scrollHeight - top;
 
