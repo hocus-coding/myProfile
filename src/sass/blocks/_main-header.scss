@@ -38,7 +38,10 @@
   height: 10%;
   background-color: $basic-white;
   border-radius: 3px;
-  animation: mp3 1s linear infinite;
+  animation-name: mp3;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   transition: background-color 0.3s ease;
 
   &:not(:last-child) {
