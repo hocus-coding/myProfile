@@ -11,14 +11,16 @@
 }
 
 .main-header__button {
-  width: 32px;
-  height: 32px;
+  width: 33px;
+  height: 33px;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid rgba($basic-dark, 0.4);
   box-shadow: 2px 2px 9px 1px rgba($basic-white, 0.3),
     -2px -2px 9px 1px rgba($basic-white, 0.3);
   background-color: transparent;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -33,15 +35,15 @@
 }
 
 .main-header__button-animation {
-  display: block;
   width: 2px;
   height: 15px;
   background-color: $basic-white;
   border-radius: 2px;
   animation-name: mp3;
-  animation-duration: 1s;
+  animation-duration: 1.2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  transform-origin: center;
   transition: background-color 0.3s ease;
 
   &:not(:last-child) {
