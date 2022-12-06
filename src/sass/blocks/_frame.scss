@@ -5,6 +5,7 @@
   display: grid;
   justify-items: center;
   align-items: center;
+  align-content: center;
   transition: $transition, opacity 0.7s ease;
   will-change: transform;
   transform-style: preserve-3d;
